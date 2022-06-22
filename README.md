@@ -2,6 +2,12 @@
 
 > Work in progress
 
+## Start new project
+
+Create new repository on GitHub, select repository template and add the name of the new repository. After clone locally don't forget to change package names.
+
+Replace all `typescript-project-template` to your own preferred name.
+
 ## Devcontainer
 
 Environment file is picked up by `docker-compose.yml`. Create new `.env` file before devcontainer will be started, don't forget fill with values.
@@ -25,5 +31,21 @@ Node.js is available in devcontainer.
 # List application versions
 $ node -v
 $ npm -v
+$ pnpm -v
 $ yarn -v
+```
+
+## pnpm package manager is available
+
+pnpm can be used on devcontainer. Dependencies will be installed automatically after devcontainer has been created.
+
+```sh
+# /workspace - run these commands from the root of the project
+$ pwd
+# Install packages - recursively, because of workspaces
+$ pnpm i
+# Install dev dependency in root
+$ pnpm i -Dw typescript
+# Install dev dependency in specific package
+$ pnpm i -DF @typescript-project-template/benchmark typescript
 ```
