@@ -2,6 +2,8 @@
 
 > Work in progress
 
+[![CI](https://github.com/nandordudas/typescript-project-template/actions/workflows/ci.yml/badge.svg)](https://github.com/nandordudas/typescript-project-template/actions/workflows/ci.yml)
+
 ## Start new project
 
 Create new repository on GitHub, select repository template and add the name of the new repository. After clone locally don't forget to change package names.
@@ -63,3 +65,9 @@ $ pnpm eslint:fix
 $ echo '(async() => {})()' | npx eslint --stdin
 # 1:7  error  Missing space before function parentheses  @typescript-eslint/space-before-function-paren
 ```
+
+## GitHub actions
+
+New workflow `CI` is available and it checks eslint issues for now. This workflow runs on every pull request and `main` branch's commits. If lint process succeed a green checkmark will show, otherwise a red cross. Commits with failed workflow will not be merged.
+
+A new badge is available on the top of `README.md` file.
