@@ -3,7 +3,7 @@ name: Benchmark
 on: [workflow_dispatch]
 
 jobs:
-  lint:
+  benchmark:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -17,7 +17,7 @@ jobs:
           node-version: 16.x
 
       - name: Install
-        run: pnpm install --filter @typescript-project-template/benchmark
+        run: pnpm install
 
       - name: Measure
         run: pnpm --filter @typescript-project-template/benchmark run
