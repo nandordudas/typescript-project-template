@@ -1,7 +1,15 @@
 {
   "name": "@typescript-project-template/benchmark",
+  "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "test": "echo \"No test available\""
+    "run": "npx tsx src"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "benny": "^3.7.1",
+    "fast-glob": "^3.2.11",
+    "tsx": "^3.5.0",
+    "typescript": "^4.7.4"
   }
 }
