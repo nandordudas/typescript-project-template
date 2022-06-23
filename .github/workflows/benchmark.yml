@@ -17,7 +17,7 @@ jobs:
           node-version: 16.x
 
       - name: Install
-        run: pnpm install
+        run: pnpm install --filter @typescript-project-template/benchmark
 
       - name: Measure
         run: pnpm --filter @typescript-project-template/benchmark measure
