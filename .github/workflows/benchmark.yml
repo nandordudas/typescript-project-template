@@ -20,4 +20,4 @@ jobs:
         run: pnpm install
 
       - name: Measure
-        run: pnpm --filter @typescript-project-template/benchmark run
+        run: pnpm --filter @typescript-project-template/benchmark measure
