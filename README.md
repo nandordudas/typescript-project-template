@@ -49,3 +49,17 @@ $ pnpm i -Dw typescript
 # Install dev dependency in specific package
 $ pnpm i -DF @typescript-project-template/benchmark typescript
 ```
+
+## ESLint
+
+Linter tool is available as extension in VS Code and can be use with command line. Configuration is availabe in `.eslintrc` file. In editor, code will be fixed immediately after saving the current file.
+
+```sh
+# Run eslint
+$ pnpm eslint
+# Fix all linting errors
+$ pnpm eslint:fix
+# ESLint config test example
+$ echo '(async() => {})()' | npx eslint --stdin
+# 1:7  error  Missing space before function parentheses  @typescript-eslint/space-before-function-paren
+```
