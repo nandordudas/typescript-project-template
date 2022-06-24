@@ -6,7 +6,8 @@
   "scripts": {
     "lint:fix": "eslint . --fix",
     "lint": "eslint .",
-    "test": "pnpm --recursive test"
+    "test": "pnpm --recursive test",
+    "typecheck": "pnpm --recursive typecheck"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.25.1",
