@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "module": "ESNext"
+  },
+  "include": [
+    "vite.config.ts"
+  ]
+}
