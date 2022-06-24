@@ -5,6 +5,7 @@
     "build": "vite build",
     "dev": "vite --host",
     "preview": "vite preview --host --port 3000",
+    "test": "vitest",
     "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
@@ -12,8 +13,12 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.3.3",
+    "@vue/test-utils": "^2.0.1",
+    "c8": "^7.11.3",
+    "happy-dom": "^5.3.1",
     "typescript": "^4.7.4",
     "vite": "^2.9.12",
+    "vitest": "^0.15.2",
     "vue-tsc": "^0.38.1"
   }
 }

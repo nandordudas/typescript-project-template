@@ -7,4 +7,8 @@ export default defineConfig({
       reactivityTransform: true,
     }),
   ],
+  test: {
+    environment: 'happy-dom',
+    globals: true,
+  },
 })
