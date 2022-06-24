@@ -4,9 +4,11 @@
   "private": true,
   "packageManager": "pnpm@7.2.0",
   "scripts": {
+    "coverage": "pnpm --recursive coverage",
     "lint:fix": "eslint . --fix",
     "lint": "eslint .",
-    "test": "pnpm --recursive test"
+    "test": "pnpm --recursive test",
+    "typecheck": "pnpm --recursive typecheck"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.25.1",
