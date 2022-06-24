@@ -23,7 +23,7 @@ importers:
       '@types/node': 18.0.0
       benny: 3.7.1
       fast-glob: 3.2.11
-      tsx: 3.5.0
+      tsx: 3.6.0
       typescript: 4.7.4
 
   packages/server:
@@ -45,7 +45,7 @@ importers:
       '@types/supertest': 2.0.12
       c8: 7.11.3
       supertest: 6.2.3
-      tsx: 3.5.0
+      tsx: 3.6.0
       typescript: 4.7.4
       vitest: 0.15.2_c8@7.11.3
 
@@ -84,7 +84,7 @@ packages:
     dependencies:
       '@antfu/eslint-config-ts': 0.25.1_b5e7v2qnwxfo6hmiq56u52mz3e
       eslint: 8.18.0
-      eslint-plugin-react: 7.30.0_eslint@8.18.0
+      eslint-plugin-react: 7.30.1_eslint@8.18.0
     transitivePeerDependencies:
       - eslint-import-resolver-typescript
       - eslint-import-resolver-webpack
@@ -206,8 +206,8 @@ packages:
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
     dev: true
 
-  /@esbuild-kit/cjs-loader/2.2.0:
-    resolution: {integrity: sha512-MWRzs8ds9sujFL++H9Z4aGak61J1Gjlj9VyIjXx9AlgtCS8EEjdjrWKPMNBXP1hvJMmKbL7PE4zT+OzaBv1CaA==}
+  /@esbuild-kit/cjs-loader/2.2.1:
+    resolution: {integrity: sha512-pq2Z4DcqTBF7y1wQuIzFVqmHJVnmP6hgHEWN2ubPjeG7OzXMZ9NvozW+YA/MIeMdZWp1jcJ/EvXk2+mfEKoCDQ==}
     dependencies:
       '@esbuild-kit/core-utils': 2.0.1
       get-tsconfig: 4.0.5
@@ -220,8 +220,8 @@ packages:
       source-map-support: 0.5.21
     dev: true
 
-  /@esbuild-kit/esm-loader/2.3.0:
-    resolution: {integrity: sha512-iaAHKgQlnXNBloPxhxR05d9nR7zF5T0z+p1umAeB/nejY9+cIN3ULMQ/O/QTW6RVtwDGxzdXdgOYCb3FjeI4PA==}
+  /@esbuild-kit/esm-loader/2.3.1:
+    resolution: {integrity: sha512-CC0H91Oa02cczLswEoiLowTzWxvnS3tIBGkQa1BnieFK7HHV4whrBFGRlUD9rMHfyyoO55IuOqNujycXX+gI8A==}
     dependencies:
       '@esbuild-kit/core-utils': 2.0.1
       get-tsconfig: 4.0.5
@@ -1504,8 +1504,8 @@ packages:
       eslint: 8.18.0
     dev: true
 
-  /eslint-plugin-react/7.30.0_eslint@8.18.0:
-    resolution: {integrity: sha512-RgwH7hjW48BleKsYyHK5vUAvxtE9SMPDKmcPRQgtRCYaZA0XQPt5FSkrU3nhz5ifzMZcA8opwmRJ2cmOO8tr5A==}
+  /eslint-plugin-react/7.30.1_eslint@8.18.0:
+    resolution: {integrity: sha512-NbEvI9jtqO46yJA3wcRF9Mo0lF9T/jhdHqhCHXiXtD+Zcb98812wvokjWpU7Q4QH5edo6dmqrukxVvWWXHlsUg==}
     engines: {node: '>=4'}
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8
@@ -3335,13 +3335,13 @@ packages:
       typescript: 4.7.4
     dev: true
 
-  /tsx/3.5.0:
-    resolution: {integrity: sha512-hLqNvjXt4EjliUKCY2mJA+tTJ3WRdPpqYdU6Q76Maa4VJONj4hBa9dPtcyRJEPFJiNxoJ0gqMak9ki0zXioJDw==}
+  /tsx/3.6.0:
+    resolution: {integrity: sha512-XzqSxPmyJnI7ZtEX/CLE/CSDkqbL7dK4jwtJRIZpV0EhCxWqtb1OqJPlUc4CVS3/MFdpt8ZxLpvPFohWRTHbzw==}
     hasBin: true
     dependencies:
-      '@esbuild-kit/cjs-loader': 2.2.0
+      '@esbuild-kit/cjs-loader': 2.2.1
       '@esbuild-kit/core-utils': 2.0.1
-      '@esbuild-kit/esm-loader': 2.3.0
+      '@esbuild-kit/esm-loader': 2.3.1
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
