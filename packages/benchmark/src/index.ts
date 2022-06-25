@@ -1,9 +1,8 @@
-import { dirname, join } from 'node:path'
-import { fileURLToPath } from 'node:url'
+import { URL } from 'node:url'
 import fg from 'fast-glob'
 
-const pwd = dirname(dirname(fileURLToPath(import.meta.url)))
 // Get all files with `suite` suffix from `suites` folder recursively.
 const entries = await fg('**/suites/*.suite.ts')
+const { pathname } = new URL('..', import.meta.url)
 
-entries.map(entry => import(join(pwd, entry)))
+entries.map(entry => import(`${pathname}/${entry}`))
