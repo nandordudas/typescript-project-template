@@ -17,3 +17,25 @@ export const ALLOWED_REQUEST_METHODS: Array<AllowedRequestMethod> = [
   AllowedRequestMethod.POST,
   AllowedRequestMethod.PUT,
 ]
+
+const ALLOWED_ORIGINS = [
+  'http://localhost:3000',
+]
+
+const ALLOWED_ORIGIN_HEADERS = [
+  'Accept',
+  'Content-Type',
+  'Origin',
+]
+
+enum AccessControlField {
+  AccessControlAllowOrigin = 'Access-Control-Allow-Origin',
+  AccessControlAllowMethods = 'Access-Control-Allow-Methods',
+  AccessControlAllowHeaders = 'Access-Control-Allow-Headers',
+}
+
+export const ACCESS_CONTROL_FIELDS: Record<AccessControlField, Array<string>> = {
+  [AccessControlField.AccessControlAllowOrigin]: ALLOWED_ORIGINS,
+  [AccessControlField.AccessControlAllowMethods]: ALLOWED_REQUEST_METHODS,
+  [AccessControlField.AccessControlAllowHeaders]: ALLOWED_ORIGIN_HEADERS,
+}
