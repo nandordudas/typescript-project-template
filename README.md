@@ -4,7 +4,7 @@
 
 [![CI](https://github.com/nandordudas/typescript-project-template/actions/workflows/ci.yml/badge.svg)](https://github.com/nandordudas/typescript-project-template/actions/workflows/ci.yml)
 
-## Start new project
+## Create new project
 
 Create new repository on GitHub, select repository template and add the name of the new repository. After clone locally don't forget to change package names.
 
@@ -25,9 +25,16 @@ Check available environment variables on running devcontainer.
 # Show SERVER_PORT environment variable value
 $ printenv | sort | grep SERVER_PORT
 ```
+
+## Start project
+
+If installation didn't run automatically then use `pnpm i`.
+
+You can start development each with `pnpm -F client dev`, `pnpm -F server dev` or `pnpm dev`. Both package listen to changes and will restart their server.
+
 ## Node.js
 
-Node.js is available in devcontainer.
+Node.js is available in devcontainer - check the official Microsoft image of that.
 
 ```sh
 # List application versions
@@ -71,3 +78,9 @@ $ echo '(async() => {})()' | npx eslint --stdin
 New workflow `CI` is available and it checks eslint issues for now. This workflow runs on every pull request and `main` branch's commits. If lint process succeed a green checkmark will show, otherwise a red cross. Commits with failed workflow will not be merged.
 
 A new badge is available on the top of `README.md` file.
+
+## Test
+
+Test library `vitest` is availabe and can be used with `pnpm test` in the root of project, which will start test command recursively. Or use `pnpm -F server test` for filtered usage.
+
+> These tests are not completed and they need some improvement, don't use in production!
