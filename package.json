@@ -8,8 +8,8 @@
     "dev": "nr --recursive dev",
     "lint:fix": "nr lint . --fix",
     "lint": "eslint .",
-    "test": "nr --recursive test",
-    "typecheck": "nr --recursive typecheck"
+    "test": "pnpm --recursive test",
+    "typecheck": "pnpm --recursive typecheck"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.25.1",
