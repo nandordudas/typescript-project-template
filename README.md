@@ -1,6 +1,6 @@
 # Typescript project template
 
-> Work in progress
+> Work in progress. This is a template repo that serves educational purposes, not for production.
 
 [![CI](https://github.com/nandordudas/typescript-project-template/actions/workflows/ci.yml/badge.svg)](https://github.com/nandordudas/typescript-project-template/actions/workflows/ci.yml)
 
@@ -92,5 +92,14 @@ A new badge is available on the top of `README.md` file.
 ## Test
 
 Test library `vitest` is availabe and can be used with `pnpm test` in the root of project, which will start test command recursively. Or use `pnpm -F server test` for filtered usage.
+
+After coverage did run, you can check the result of it.
+
+```sh
+$ # Run coverage with specific path
+$ pnpm test -F server
+$ # Serve created coverage
+$ npx serve /workspace/packages/server/coverage
+```
 
 > These tests are not completed and they need some improvement, don't use in production!
