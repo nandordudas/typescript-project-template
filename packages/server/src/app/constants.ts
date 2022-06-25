@@ -1,4 +1,4 @@
-import { AllowedRequestMethod, ApiVersion } from '../types'
+import { AllowedRequestMethod, ApiVersion } from '@types'
 
 export const {
   NODE_ENV = 'development',

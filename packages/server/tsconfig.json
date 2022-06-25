@@ -1,7 +1,28 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
+    "baseUrl": ".",
     "module": "CommonJS",
+    "paths": {
+      "@app": [
+        "./src/app"
+      ],
+      "@middlewares": [
+        "./src/middlewares"
+      ],
+      "@middlewares/*": [
+        "./src/middlewares/*"
+      ],
+      "@routes": [
+        "./src/routes"
+      ],
+      "@routes/*": [
+        "./src/routes/*"
+      ],
+      "@types": [
+        "./src/types.ts"
+      ]
+    },
     "types": [
       "vitest/globals"
     ]

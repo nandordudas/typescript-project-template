@@ -2,7 +2,7 @@
 import destr from 'destr'
 import { onMounted } from 'vue'
 import { $ref } from 'vue/macros'
-import Message from './components/Message.vue'
+import Message from '@components/Message.vue'
 
 let message = $ref('Loading...')
 let pingPong = $ref('Connecting...')

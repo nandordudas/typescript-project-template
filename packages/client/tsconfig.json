@@ -1,12 +1,18 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
+    "baseUrl": ".",
     "isolatedModules": true,
     "jsx": "preserve",
     "lib": [
       "ESNext",
       "DOM"
     ],
+    "paths": {
+      "@components/*": [
+        "./src/components/*"
+      ]
+    },
     "types": [
       "vite/client",
       "vitest/globals"

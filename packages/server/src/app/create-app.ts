@@ -1,6 +1,6 @@
 import type { Router } from 'express'
 import express from 'express'
-import { middlewares } from '../middlewares'
+import { middlewares } from '@middlewares'
 
 const { pre: preMiddlewares, post: postMiddlewares } = middlewares
 

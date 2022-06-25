@@ -1,7 +1,7 @@
 import httpRequest from 'supertest'
 import wsRequest from 'superwstest'
-import { createApp, createServer, createWebSocket } from '../src/app'
-import { routes } from '../src/routes'
+import { createApp, createServer, createWebSocket } from '@app'
+import { routes } from '@routes'
 
 const app = createApp(routes)
 const httpServer = createServer(app)

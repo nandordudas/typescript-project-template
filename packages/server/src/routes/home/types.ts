@@ -1,4 +1,4 @@
-import type { ParametersBase, ResponseBase } from '../../types'
+import type { ParametersBase, ResponseBase } from '@types'
 
 export interface Parameters extends ParametersBase {}
 

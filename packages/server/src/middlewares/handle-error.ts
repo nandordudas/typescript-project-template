@@ -1,5 +1,5 @@
 import type { ErrorRequestHandler, Response } from 'express'
-import type { ResponseBase } from '../types'
+import type { ResponseBase } from '@types'
 
 const defaultStatusCode = 500
 const defaultErrorMessage = 'Internal Server Error'

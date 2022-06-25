@@ -1,6 +1,6 @@
 import type { Request, RequestHandler } from 'express'
-import { ALLOWED_API_VERSIONS } from '../app/constants'
-import type { ParametersBase } from '../types'
+import { ALLOWED_API_VERSIONS } from '@app'
+import type { ParametersBase } from '@types'
 
 const errorMessage = 'Api version not allowed'
 

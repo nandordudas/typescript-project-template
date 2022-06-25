@@ -1,9 +1,9 @@
 import { Router } from 'express'
 import { tryCatch } from '@typescript-project-template/shared'
-import { isUserAuthenticated } from '../../middlewares'
-import type { IsAuthenticatedLocalData } from '../../middlewares/types'
-import { AllowedRequestMethod, RoutePath } from '../../types'
-import { routerOptions } from '../config'
+import { isUserAuthenticated } from '@middlewares'
+import type { IsAuthenticatedLocalData } from '@middlewares/types'
+import { AllowedRequestMethod, RoutePath } from '@types'
+import { routerOptions } from '@routes/config'
 import type { Parameters, Query, Request, Response } from './types'
 
 export const router = Router(routerOptions)
