@@ -1,29 +1,28 @@
 import { log } from 'node:console'
-import type { Server as HttpServer } from 'node:http'
-import { Server as WebSocketServer } from 'ws'
+import type { IncomingMessage, Server } from 'node:http'
+import WebSocket from 'ws'
 
-export const createWebSocket = (server: HttpServer) => {
-  const websocketServer = new WebSocketServer({
-    noServer: true,
+const onConnection = (
+  connection: WebSocket.WebSocket,
+  request: IncomingMessage,
+) => {
+  log(request.url)
+
+  connection.on('message', (message) => {
+    log(message)
+    connection.send(JSON.stringify({
+      message: 'There be gold in them thar hills.',
+    }))
+  })
+}
+
+export const createWebSocket = (server: Server) => {
+  const websocketServer = new WebSocket.Server({
     path: '/api/v1',
+    server,
   })
 
-  server.on('upgrade', (request, socket, head) => {
-    websocketServer.handleUpgrade(request, socket, head, (websocket) => {
-      websocketServer.emit('connection', websocket, request)
-    })
-  })
-
-  websocketServer.on('connection', (connection, request) => {
-    log(request.url)
-
-    connection.on('message', (message) => {
-      log(message)
-      connection.send(JSON.stringify({
-        message: 'There be gold in them thar hills.',
-      }))
-    })
-  })
+  websocketServer.on('connection', onConnection)
 
   return websocketServer
 }
