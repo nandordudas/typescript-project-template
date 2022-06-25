@@ -22,5 +22,8 @@
         "volar.completion.preferredTagNameCase": "pascal"
       }
     }
-  }
+  },
+  "forwardPorts": [
+    3306
+  ]
 }

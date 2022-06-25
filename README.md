@@ -32,6 +32,16 @@ If installation didn't run automatically then use `pnpm i`.
 
 You can start development each with `pnpm -F client dev`, `pnpm -F server dev` or `pnpm dev`. Both package listen to changes and will restart their server.
 
+## Database
+
+MariDB is available in project on port `3306` in-, and outside the container. External database client like `HeidiSQL` is recommended but VS Code extensions are good choice too - or use the command line.
+
+Recommended to update database collation:
+
+```sql
+ALTER DATABASE `mariadb` COLLATE 'utf8mb4_unicode_ci';
+```
+
 ## Node.js
 
 Node.js is available in devcontainer - check the official Microsoft image of that.
