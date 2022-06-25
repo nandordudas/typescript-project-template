@@ -1,4 +1,5 @@
 import { Router } from 'express'
+import { tryCatch } from '@typescript-project-template/shared'
 import { isUserAuthenticated } from '../../middlewares'
 import type { IsAuthenticatedLocalData } from '../../middlewares/types'
 import { AllowedRequestMethod, RoutePath } from '../../types'
@@ -40,11 +41,9 @@ router[AllowedRequestMethod.PUT]<
 >(RoutePath.Home, isUserAuthenticated(), async (request, response, next) => {
   const { locals } = response
 
-  try {
-    if (!locals.isAuthenticated)
-      await Promise.reject(new Error('No go'))
-  }
-  catch (error) {
+  if (!locals.isAuthenticated) {
+    const { error } = await tryCatch(Promise.reject(new Error('No go')))
+
     return next(error)
   }
 
