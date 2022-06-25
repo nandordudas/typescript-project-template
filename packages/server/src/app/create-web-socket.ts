@@ -8,11 +8,8 @@ const onConnection = (
 ) => {
   log(request.url)
 
-  connection.on('message', (message) => {
-    log(message)
-    connection.send(JSON.stringify({
-      message: 'There be gold in them thar hills.',
-    }))
+  connection.addEventListener('message', () => {
+    connection.send(JSON.stringify({ message: 'pong' }))
   })
 }
 
@@ -22,7 +19,7 @@ export const createWebSocket = (server: Server) => {
     server,
   })
 
-  websocketServer.on('connection', onConnection)
+  websocketServer.addListener('connection', onConnection)
 
   return websocketServer
 }
