@@ -23,11 +23,14 @@ jobs:
         with:
           node-version: 16.x
 
+      - name: Setup
+        run: npm i -g @antfu/ni
+
       - name: Install
-        run: pnpm install
+        run: nci
 
       - name: Lint
-        run: pnpm lint
+        run: nr lint
 
   typecheck:
     runs-on: ubuntu-latest

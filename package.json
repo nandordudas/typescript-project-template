@@ -6,7 +6,7 @@
   "scripts": {
     "coverage": "pnpm --recursive coverage",
     "dev": "pnpm --recursive dev",
-    "lint:fix": "eslint . --fix",
+    "lint:fix": "nr lint . --fix",
     "lint": "eslint .",
     "test": "pnpm --recursive test",
     "typecheck": "pnpm --recursive typecheck"
