@@ -7,3 +7,16 @@ The server can be started with `pnpm dev` command and it needs the `SERVER_PORT`
 Websocket is available too with minimal setup. Route are living in their folder and test files can describe the behavior of given route.
 
 Recommended to use external rest clients like `Insomnia`, `Postman`, etc., or VS Code extension like `Thunder Client`.
+
+## Knex.js
+
+With `Knex.js` using database will be more easier.
+
+```sh
+$ # Create new migration file
+$ npx knex migrate:make users
+$ # Crete tables like migration contains
+$ npx knex migrate:up
+$ # Seed data
+$ knex seed:run
+```
