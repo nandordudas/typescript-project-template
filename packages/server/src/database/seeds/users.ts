@@ -1,5 +1,5 @@
 import type { Knex } from 'knex'
-import type { User } from 'knex/types/tables'
+import type { User } from '../types'
 
 const data: Knex.DbRecordArr<User> = [
   { age: 7, name: 'Snowflake' },

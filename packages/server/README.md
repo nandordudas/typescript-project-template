@@ -13,10 +13,14 @@ Recommended to use external rest clients like `Insomnia`, `Postman`, etc., or VS
 With `Knex.js` using database will be more easier.
 
 ```sh
+$ # Navigate into database folder
+$ cd /workspace/packages/server/src/database
 $ # Create new migration file
 $ npx knex migrate:make users
-$ # Crete tables like migration contains
+$ # Crete tables like migrations
 $ npx knex migrate:up
+$ # Drop tables
+$ npx knex migrate:down
 $ # Seed data
-$ knex seed:run
+$ npx knex seed:run
 ```
