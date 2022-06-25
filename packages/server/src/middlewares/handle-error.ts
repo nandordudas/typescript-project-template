@@ -10,6 +10,7 @@ export const handleError: () => ErrorRequestHandler = () => (
   response: Response<ResponseBase>,
   next,
 ) => {
+  // TODO: Sentry capturing error here #31
   if (error instanceof Error) {
     const message = error.message || defaultErrorMessage
 
