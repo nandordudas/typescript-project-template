@@ -16,6 +16,7 @@
     "@types/node": "^18.0.0",
     "@types/supertest": "^2.0.12",
     "@types/ws": "^8.5.3",
+    "@typescript-project-template/shared": "workspace:*",
     "c8": "^7.11.3",
     "destr": "^1.1.1",
     "knex": "^2.1.0",
