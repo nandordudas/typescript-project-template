@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "build": "vite build",
+    "coverage": "vitest run --coverage",
     "dev": "vite --host",
     "preview": "vite preview --host --port 3000",
     "test": "vitest",
