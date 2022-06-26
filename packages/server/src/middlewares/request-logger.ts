@@ -6,8 +6,8 @@ export const requestLogger: () => RequestHandler = () => (
   _response,
   next,
 ) => {
-  const { body, params, query, url } = request
+  const { body, method, params, query, url } = request
 
-  log('request', JSON.stringify({ body, params, query, url }))
+  log('request', JSON.stringify({ body, method, params, query, url }))
   next()
 }

@@ -2,8 +2,8 @@ export interface ParametersBase {
   apiVersion: ApiVersion
 }
 
-export interface ResponseBase {
-  data?: Record<string, any>
+export interface ResponseBase<T extends Record<string, any> = any> {
+  data?: T
   message: string
 }
 
@@ -23,3 +23,6 @@ export enum AllowedRequestMethod {
   POST = 'post',
   PUT = 'put',
 }
+
+// TODO: import from shared package
+export type Nullable<T> = T | null

@@ -1,11 +1,12 @@
 import httpRequest from 'supertest'
 import wsRequest from 'superwstest'
-import { createApp, createServer, createWebSocket } from '@app'
-import { routes } from '@routes'
+import { App } from '@app'
 
-const app = createApp(routes)
-const httpServer = createServer(app)
-const webSocketServer = createWebSocket(httpServer)
+App.getInstance().start()
+
+const app = App.getInstance().getApp()!
+const httpServer = App.getInstance().getServer()!
+const webSocketServer = App.getInstance().getWebSocketServer()!
 
 const onWebSocketConnection = vi.fn()
 
