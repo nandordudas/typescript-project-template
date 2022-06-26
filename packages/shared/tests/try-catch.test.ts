@@ -1,4 +1,4 @@
-import { tryCatch } from '../src'
+import { tryCatch } from '@core/try-catch'
 
 const onError = vi.fn()
 const onResult = vi.fn()

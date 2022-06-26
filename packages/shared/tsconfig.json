@@ -1,6 +1,15 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@core/*": [
+        "./src/*"
+      ],
+      "@types": [
+        "./src/types.ts"
+      ]
+    },
     "types": [
       "vitest/globals"
     ]
