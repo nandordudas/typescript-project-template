@@ -97,7 +97,7 @@ After coverage did run, you can check the result of it.
 
 ```sh
 $ # Run coverage with specific path
-$ pnpm test -F server
+$ pnpm -F server coverage
 $ # Serve created coverage
 $ npx serve /workspace/packages/server/coverage
 ```
