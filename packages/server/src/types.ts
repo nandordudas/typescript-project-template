@@ -13,6 +13,7 @@ export enum ApiVersion {
 
 export enum RoutePath {
   Home = '/',
+  Error = '/error',
 }
 
 export enum AllowedRequestMethod {
