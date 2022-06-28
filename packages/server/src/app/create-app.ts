@@ -1,4 +1,4 @@
-import type { Router } from 'express'
+import type { ErrorRequestHandler, RequestHandler, Router } from 'express'
 import express from 'express'
 import { middlewares } from '@middlewares'
 import { Handlers as SentryHandlers, Integrations as SentryIntegrations, init } from '@sentry/node'
@@ -20,11 +20,11 @@ export const createApp = (routes: Array<Router>) => {
     tracesSampleRate: tracesSampleRate,
   })
 
-  app.use(SentryHandlers.requestHandler() as express.RequestHandler)
+  app.use(SentryHandlers.requestHandler() as RequestHandler)
   app.use(SentryHandlers.tracingHandler())
 
   app.use('/api/:apiVersion', preMiddlewares, routes)
-  app.use(SentryHandlers.errorHandler() as express.ErrorRequestHandler)
+  app.use(SentryHandlers.errorHandler() as ErrorRequestHandler)
   app.use(postMiddlewares)
 
   return app
