@@ -1,5 +1,6 @@
 import type { ErrorRequestHandler, Response } from 'express'
 import type { ResponseBase } from '@types'
+import { captureException } from '@sentry/node'
 
 const defaultStatusCode = 500
 const defaultErrorMessage = 'Internal Server Error'
@@ -10,7 +11,7 @@ export const handleError: () => ErrorRequestHandler = () => (
   response: Response<ResponseBase>,
   next,
 ) => {
-  // TODO: Sentry capturing error here #31
+  captureException(error)
   if (error instanceof Error) {
     const message = error.message || defaultErrorMessage
 
